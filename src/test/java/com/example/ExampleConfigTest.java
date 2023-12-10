@@ -17,11 +17,27 @@ public class ExampleConfigTest {
     MyOtherConfig myOtherConfig;
 
     @Test
-    void configs_should_be_equal() {
+    void config_foos_should_be_equal() {
 
         assertEquals(myConfig.foo(), myOtherConfig.config().foo());
+    }
+
+    @Test
+    void config_lists_should_be_equal() {
+
         assertEquals(myConfig.list(), myOtherConfig.config().list());
+    }
+
+    @Test
+    void config_nested_should_be_equal() {
+
         assertEquals(myConfig.nested().nestedName(), myOtherConfig.config().nested().nestedName());
+    }
+
+    @Test
+    void config_maps_should_be_equal() {
+
         assertEquals(myConfig.map(), myOtherConfig.config().map());
     }
+
 }
